@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <pigpio.h>
 
-#define LED 4
+#define LED 17
 
 int peopleCount = 0;
 
@@ -56,6 +56,7 @@ int main(int argc, char* argv[]) {
 		printPeopleCount();
 		}
 	else if(menuSelect == 5){
+		gpioWrite(LED, 0);
 		break;
 		}
 	else {
